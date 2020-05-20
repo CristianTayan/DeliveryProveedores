@@ -1,0 +1,40 @@
+<ion-header no-border style=" background-color: #F4C418">
+  <ion-navbar transparent >
+    <button ion-button menuToggle
+      style="background-color: #e5cc7b; opacity: 0.9; width: 48px; height: 48px; border-radius: 50%;position: relative;">
+      <ion-icon name="menu" style="margin-left: 21px;"></ion-icon>
+    </button>
+    <ion-title>
+      <strong>Ingresar dirección de tu empresa</strong>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <div id="map" style="position:relative;width:100%;height:100%;">
+    <img src="assets/imgs/marker-blue.png" style="position:absolute;left:45%;bottom:50%;width:40px;height:40px" />
+
+    <ion-card class="formulario" style="position:absolute; bottom: -3px; margin-left: 3%; width: 94%; border-radius: 12px; padding: 15px; background-color: #f4f4f4;">
+      <ion-item class="ion-card">
+        <ion-input type="text" [(ngModel)]="geoAddress"
+          class="ion_input" name="direccion" required></ion-input>
+        <ion-icon name="pin" class="ion_icon" item-left small></ion-icon>
+      </ion-item>
+      <button ion-button block color="amarillo" *ngIf="!geoAddress" largue round style="color: #9b0347;" disabled>GUARDAR UBICACIÓN</button>
+      <button ion-button block color="amarillo" *ngIf="geoAddress" largue round (click)="guardar_direccion()" style="color: #9b0347;">GUARDAR UBICACIÓN</button>
+    </ion-card>
+    <!-- <button ion-button block round (click)="click()">print</button> -->
+    <ion-fab top left style="margin-top: 96%; z-index: 999;" (click)="click()">
+      <button ion-fab color="morado">
+        <ion-icon style="color: white;" name="map"></ion-icon>
+      </button>
+    </ion-fab>
+    <ion-fab top right  (tap)="getPosition()">
+      <button ion-fab color="amarillo">
+        <ion-icon style="color: white;" name="locate"></ion-icon>
+      </button>
+    </ion-fab>
+  </div>
+
+</ion-content>

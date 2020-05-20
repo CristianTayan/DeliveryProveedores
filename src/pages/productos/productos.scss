@@ -1,0 +1,47 @@
+page-productos {
+  ion-header {
+    background-color: #f4f4f4;
+    ion-icon {
+      color: #9b0347;
+      margin-right: 20px;
+    }
+    ion-title {
+      font-weight: 400;
+      text-align: center;
+      strong {
+        font-size: 20px;
+        color: #9b0347;
+      }
+    }
+  }
+  .scroll-content {
+    background-color: #f1eee9;
+    h2 {
+      color: #f4c418;
+    }
+    p {
+      color: #9b0347;
+      margin: 0px;
+    }
+  }
+
+  .productos {
+    margin-left: 3%;
+    margin-top: 0px;
+    width: 100%;
+    h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #1f3352;
+      ion-icon {
+        margin-right: 20px;
+        margin-left: 3px;
+      }
+    }
+    ion-card {
+      margin: 0px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+  }
+}

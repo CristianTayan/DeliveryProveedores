@@ -1,0 +1,36 @@
+<ion-menu [content]="contenido">
+  <ion-header no-border style="background-color: #fff;">
+
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item style="padding-left: 25px;margin-top: 30px; border-bottom: 1px solid #efefef;">
+        <img *ngIf="foto" src="http://192.168.1.13/app_compras/public/{{ foto }}" style="width: 80px; height: 80px;border-radius: 40px; ">
+        <p style=" color: #d3a200; margin-top: 12px; font-size: 1.2em;">{{ nombre_empresa }}</p>
+        <p style="font-size: 0.7em; color: #9b0347;">{{ correo }}</p>
+      </ion-item>
+
+      <ion-list style="padding-left: 20px;">
+        <button ion-item (click)="openPage(rootPage)" style="color: #1f3352;" no-lines>
+         <ion-icon name="ios-home-outline" style="color: #9b0347; font-size: 20px; margin-right: 25px;"></ion-icon>Inicio
+        </button>
+        <button ion-item (click)="openPage(perfil)" style="color: #1f3352;" no-lines>
+          <ion-icon name="ios-briefcase-outline" style="color: #9b0347; font-size: 20px; margin-right: 25px;"></ion-icon>Perfil empresa
+        </button>
+        <button ion-item (click)="openPage(mapa)" style="color: #1f3352;" no-lines>
+          <ion-icon name="ios-map-outline" style="color: #9b0347; font-size: 20px; margin-right: 25px;"></ion-icon>Ubicación
+        </button>
+      </ion-list>
+    </ion-list>
+  </ion-content>
+  <ion-footer no-border>
+    <button style="margin-left: 25px;" ion-item (click)="cerrar_sesion()" no-lines>
+      <ion-icon name="log-out" style="color: black;margin-right: 10px;"></ion-icon> Cerrar sesion
+    </button>
+  </ion-footer>
+
+</ion-menu>
+
+
+
+<ion-nav [root]="rootPage" #contenido></ion-nav>

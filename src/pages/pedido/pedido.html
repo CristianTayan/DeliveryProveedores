@@ -1,0 +1,40 @@
+<ion-header no-border style="background-color: #F1EEE9">
+  <ion-navbar transparent>
+    <button ion-button menuToggle
+      style="background-color: #e5cc7b; opacity: 0.9; width: 48px; height: 48px; border-radius: 50%;position: relative;">
+      <ion-icon name="menu" style="margin-left: 21px;"></ion-icon>
+    </button>
+    <ion-title style="text-align: center;">
+      <!-- <strong style="font-size: 20px; margin-left: -25px; color: #9B0347;">PRODUCTOS</strong> -->
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content >
+  <div padding>
+    <h2>Historial</h2>
+    <p>Observa tus pedidos recientes</p>
+  </div>
+
+  <div class="productos">
+    <ion-card (click)="abrir_producto(item.IDPRODUCTO, item.NOMBRE)">
+      <ion-row>
+        <ion-col col-3 style="text-align: center; vertical-align: middle;">
+          <ion-icon name="cart" style="font-size: 40px; margin-top: 10px;"></ion-icon>
+        </ion-col>
+        <ion-col col-5>
+          <p class="titulo" style="color: #1f3352;"><strong>Menestra de pollo</strong></p>
+          <p class="subtitulo" style="color: #1f3352;">Arroz, papas, menestra, pollo</p>
+        </ion-col>
+        <ion-col col-4 style="vertical-align: middle; text-align: center;">
+          <br>
+          <button ion-button round sm>$ 2,00</button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </div>
+  <ion-fab right bottom>
+    <button ion-fab color="amarillo">
+      <ion-icon name="md-add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

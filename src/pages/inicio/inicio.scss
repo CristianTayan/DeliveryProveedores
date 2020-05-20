@@ -1,0 +1,32 @@
+page-inicio {
+  .scroll-content {
+    background-color: #f1eee9;
+  }
+  p {
+    font-size: 0.8px;
+  }
+  ion-icon {
+    color: #5f0626;
+    opacity: 0.9;
+    margin-left: 50%;
+    opacity: 0.5;
+  }
+  .numero {
+    color: #febd01;
+    font-weight: 800;
+    font-size: 40px;
+  }
+  .icon-card {
+    color: white;
+    font-size: 50px;
+  }
+
+  .item.item-trns {
+    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+  }
+  .subtitulo {
+    color: #5f0626;
+  }
+}

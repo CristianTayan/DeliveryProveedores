@@ -1,0 +1,57 @@
+<ion-header no-border style=" background-color: #F4C418">
+  <ion-navbar transparent>
+    <ion-title>
+      <strong>Crear producto</strong>
+    </ion-title>
+    <ion-buttons end>
+      <ion-icon style="font-size: 30px; color: #F4C418;" name="cart"></ion-icon>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <br>
+  <div id="img_empresa">
+  <img src="assets/imgs/foto_empresa.png" *ngIf="!foto" alt=""
+    style=" object-fit:scale-down;">
+  <img src="{{ foto }}" *ngIf="foto" alt="" style=" object-fit:cover; border-radius: 5px;">
+  <button class="upload" (tap)="getPictureGallery()" ion-fab mini>
+    <ion-icon style="color: #fff;" name="ios-camera-outline"></ion-icon>
+  </button>
+  </div>
+  <div style="width: 100%; height: 20px;"></div>
+  <form [formGroup]="myForm" (ngSubmit)="agregar_producto()" novalidate>
+    <ion-list>
+      <ion-item class="ion-card">
+        <ion-input type="text" placeholder="Nombre del producto" formControlName="nombre" [(ngModel)]="nombre"
+          class="ion_input" name="nombre"></ion-input>
+        <ion-icon name="ios-basket-outline" class="ion_icon" item-left small></ion-icon>
+      </ion-item>
+
+      <ion-item class="ion-card">
+        <ion-label>Categoría</ion-label>
+        <ion-select [(ngModel)]="idcategoria" formControlName="idcategoria" cancelText="Cancelar" okText="Ok">
+          <ion-option *ngFor="let item of categorias" value="{{ item.IDCATEGORIA}}">{{ item.NOMBRE }}</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item class="ion-card">
+        <ion-input type="number" placeholder="Costo" formControlName="costo" [(ngModel)]="costo" class="ion_input"
+          name="costo"></ion-input>
+        <ion-icon name="ios-cash" class="ion_icon" item-left small></ion-icon>
+      </ion-item>
+
+      <ion-item class="ion-card">
+        <ion-input type="text" placeholder="Descripción" formControlName="descripcion" [(ngModel)]="descripcion"
+          class="ion_input" name="descripcion"></ion-input>
+        <ion-icon name="ios-clipboard" class="ion_icon" item-left small></ion-icon>
+      </ion-item>
+    </ion-list>
+    <div>
+      <button ion-button block large color="primary"
+        style="font-weight: 300; text-transform: none;  background-size: cover;" type="submit"
+        [disabled]="myForm.invalid">Crear producto</button>
+    </div>
+  </form>
+</ion-content>

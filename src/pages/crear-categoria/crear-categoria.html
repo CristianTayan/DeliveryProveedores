@@ -1,0 +1,39 @@
+<ion-header no-border style=" background-color: #F4C418">
+  <ion-navbar transparent>
+    <ion-title>
+      <strong>Agregar categoría</strong>
+    </ion-title>
+    <ion-buttons end>
+      <ion-icon style="font-size: 30px; color: #F4C418;" name="cart"></ion-icon>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div padding>
+    <h2>Categorías</h2>
+    <p>Mantén tus productos ordenados por categoría</p>
+  </div>
+  <div style="width: 100%; height: 20px;"></div>
+  <form [formGroup]="myForm" (ngSubmit)="crear_categoria()" novalidate>
+    <ion-list>
+      <ion-item class="ion-card">
+        <ion-input type="text" placeholder="Nombre de la categoria" formControlName="nombre" [(ngModel)]="nombre"
+          class="ion_input" name="nombre"></ion-input>
+        <ion-icon name="ios-albums-outline" class="ion_icon" item-left small></ion-icon>
+      </ion-item>
+
+      <ion-item class="ion-card">
+        <ion-input type="text" placeholder="Detalle" formControlName="detalle" [(ngModel)]="detalle" class="ion_input"
+          name="detalle"></ion-input>
+        <ion-icon name="ios-create-outline" class="ion_icon" item-left small></ion-icon>
+      </ion-item>
+    </ion-list>
+    <div>
+      <button ion-button block large color="primary"
+        style="font-weight: 300; text-transform: none;  background-size: cover;" type="submit"
+        [disabled]="myForm.invalid">Crear categoria</button>
+    </div>
+  </form>
+</ion-content>

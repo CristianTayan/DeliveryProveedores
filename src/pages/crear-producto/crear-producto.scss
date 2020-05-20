@@ -1,0 +1,60 @@
+page-crear-producto {
+  ion-header {
+    background-color: #f4f4f4;
+    ion-icon {
+        color: #9b0347;
+        margin-right: 20px;
+    }
+    ion-title {
+        font-weight: 400;
+        text-align: center;
+        strong {
+            font-size: 20px;
+            color: #9b0347;
+        }
+    }
+}
+.scroll-content {
+    background-color: #F4C418;
+}
+  #img_empresa {
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+
+  #img_empresa img {
+    width: 220px;
+    height: 140px;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  .ion-card {
+    background-color: #fff;
+    border: 1px solid #f1eee9;
+    margin: 20px auto;
+    border-radius: 10px !important;
+  }
+  .upload {
+    position: absolute;
+    top: 80%;
+    left: 43%;
+  }
+
+  .ion_input {
+    color: #9b0347;
+    opacity: 0.6;
+  }
+  .ion_icon {
+    color: #9b0347;
+    opacity: 0.6;
+    font-size: 12px;
+  }
+  .home_back{
+    background-color: #15161D;
+   }
+   .item-inner, ion-item {
+    border-bottom-color: transparent !important;
+    box-shadow: none !important;
+    }
+}
