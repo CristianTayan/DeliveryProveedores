@@ -23,13 +23,14 @@ export class CategoriasPage {
 
   ionViewDidLoad() {
     this.get_categorias();
-    this.statusBar.backgroundColorByHexString('#F1EEE9');
-    this.statusBar.styleDefault();
+    this.statusBar.backgroundColorByHexString('#512DA8');
+    this.get_categorias();
+    this.statusBar.styleLightContent();
   }
 
   ionViewDidEnter(){
-    this.statusBar.backgroundColorByHexString('#F1EEE9');
-    this.statusBar.styleDefault();
+    this.statusBar.backgroundColorByHexString('#512DA8');
+    this.statusBar.styleLightContent();
   }
 
   get_categorias(){

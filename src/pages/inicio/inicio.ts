@@ -15,18 +15,18 @@ import { StatusBar } from '@ionic-native/status-bar';
   templateUrl: 'inicio.html',
 })
 export class InicioPage {
-
+  nombre_empresa = localStorage.getItem('nombre_empresa');
   constructor(public navCtrl: NavController, public navParams: NavParams, private statusBar: StatusBar) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad InicioPage');
-    this.statusBar.backgroundColorByHexString('#d3a200');
+    this.statusBar.backgroundColorByHexString('#512DA8');
     this.statusBar.styleLightContent();
   }
 
   ionViewDidEnter(){
-    this.statusBar.backgroundColorByHexString('#d3a200');
+    this.statusBar.backgroundColorByHexString('#512DA8');
     this.statusBar.styleLightContent();
   }
 

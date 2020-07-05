@@ -14,6 +14,8 @@ import { PedidosProvider } from '../providers/pedidos/pedidos';
 import { HttpClientModule } from '@angular/common/http';
 import { CategoriasProvider } from '../providers/categorias/categorias';
 import { Camera} from '@ionic-native/camera';
+import { FCM } from '@ionic-native/fcm';
+import { CallNumber } from '@ionic-native/call-number';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { Camera} from '@ionic-native/camera';
     GoogleMaps,
     Geolocation,
     NativeGeocoder,
+    FCM,
+    CallNumber,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     UsuariosProvider,
     ProductosProvider,

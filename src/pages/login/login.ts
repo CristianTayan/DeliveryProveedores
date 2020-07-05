@@ -23,9 +23,10 @@ export class LoginPage {
       correo: ['', Validators.compose([Validators.required, Validators.email])],
       acceso: ['', Validators.compose([Validators.required])]
     });
-    this.statusBar.backgroundColorByHexString('#d3a200');
+    this.statusBar.backgroundColorByHexString('#512DA8');
     this.statusBar.styleLightContent();
   }
+  
 
   ionViewDidLoad() {
     this.menuCtrl.enable(false);
@@ -43,7 +44,18 @@ export class LoginPage {
       this.userData = data;
       this.navCtrl.setRoot(HomePage);
       localStorage.setItem('validate_sesion','1010');
-      this.crear_sesion(this.userData)
+      this.crear_sesion(this.userData);
+      this.add_fcm_token();
+    })
+  }
+
+  add_fcm_token(){
+    var data = {};
+    data['correo'] = localStorage.getItem('correo');
+    data['token'] = localStorage.getItem('token');
+    this.usuarioProvider.FCM_Token(data)
+    .then(res =>{
+      console.log(res);
     })
   }
 

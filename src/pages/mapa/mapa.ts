@@ -41,13 +41,13 @@ export class MapaPage {
 
   ionViewDidLoad() {
     this.loadMap();
-    this.statusBar.backgroundColorByHexString('#d3a200');
-    this.statusBar.styleLightContent();
+    this.statusBar.backgroundColorByHexString('#F1EEE9');
+    this.statusBar.styleDefault();
   }
 
   ionViewDidEnter(){
-    this.statusBar.backgroundColorByHexString('#d3a200');
-    this.statusBar.styleLightContent();
+    this.statusBar.backgroundColorByHexString('#F1EEE9');
+    this.statusBar.styleDefault();
   }
 
   loadMap() {

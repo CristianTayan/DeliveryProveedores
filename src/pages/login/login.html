@@ -1,23 +1,16 @@
-<ion-header no-border style="background-color: #F4C418;">
-  <ion-navbar transparent style="margin-top: 20px;">
-    <ion-title style="font-weight: 400; text-align: center;">
-      <strong style="font-size: 20px; color: #9B0347;">Delivery</strong><strong
-        style="font-weight: 300; font-size: 20px; color: #00B5C6;"> Ibarra</strong>
-    </ion-title>
-  </ion-navbar>
-  <!-- <ion-searchbar placeholder="Buscar" ></ion-searchbar> -->
-</ion-header>
+<!-- -->
 
 
 
-<ion-content padding style="position: relative;">
-  <br>
+<ion-content padding style="position: relative; background: url('assets/imgs/fondo.jpg') no-repeat center center fixed; background-size: cover;">
+
 
   <div padding>
     <br>
-    <div style="margin-top: 20px;">
-      <h1 style="color: #9B0347;">Bienvenido,</h1>
-      <h6 style="color: #222;">Inicia sesión para continuar</h6>
+    <div style="text-align: center;">
+      <img src="assets/imgs/Marca-KIPI-logo-sup.png" alt="" style="width: 300px;">
+      <h1 style="color: #fff;">Bienvenido proveedor,</h1>
+      <h6 style="color: #BDBDBD;">Inicia sesión para continuar</h6>
     </div>
   </div>
   <br>
@@ -37,11 +30,15 @@
           <ion-icon name="finger-print" class="ion_icon" item-left small></ion-icon>
         </ion-item>
       </ion-list>
-      <div padding>
-        <button ion-button block round large
-          style="font-weight: 300; text-transform: none;background-color: #00B5C6;  background-size: cover;"
+      <div>
+        <button ion-button block large color="accent"
+          style="font-weight: 300; text-transform: none;  background-size: cover;"
           type="submit" [disabled]="myForm.invalid">Login</button>
       </div>
+      <br>
+      <!-- <div style="width:96%; text-align: center;">
+        <h6 style="color: #fff;" (tap)="registro()">Usuario nuevo? <strong style="color: #b4b0b0;"> Registrate</strong></h6>
+      </div> -->
     </form>
   </div>
 </ion-content>

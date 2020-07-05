@@ -1,11 +1,12 @@
-<ion-header no-border style=" background-color: #F4C418">
-  <ion-navbar transparent >
+<ion-header no-border style="background-color: #F1EEE9">
+  <ion-navbar transparent>
     <button ion-button menuToggle
-      style="background-color: #e5cc7b; opacity: 0.9; width: 48px; height: 48px; border-radius: 50%;position: relative;">
+      style="background-color: #D1C4E9; opacity: 0.9; width: 48px; height: 48px; border-radius: 50%;position: relative;">
       <ion-icon name="menu" style="margin-left: 21px;"></ion-icon>
     </button>
-    <ion-title>
-      <strong>Ingresar dirección de tu empresa</strong>
+    <ion-title style="text-align: center;">
+      Ubicación de tu empresa
+      <!-- <strong style="font-size: 20px; margin-left: -25px; color: #757575;">PRODUCTOS</strong> -->
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -21,8 +22,8 @@
           class="ion_input" name="direccion" required></ion-input>
         <ion-icon name="pin" class="ion_icon" item-left small></ion-icon>
       </ion-item>
-      <button ion-button block color="amarillo" *ngIf="!geoAddress" largue round style="color: #9b0347;" disabled>GUARDAR UBICACIÓN</button>
-      <button ion-button block color="amarillo" *ngIf="geoAddress" largue round (click)="guardar_direccion()" style="color: #9b0347;">GUARDAR UBICACIÓN</button>
+      <button ion-button block color="amarillo" *ngIf="!geoAddress" largue round  disabled>GUARDAR UBICACIÓN</button>
+      <button ion-button block color="amarillo" *ngIf="geoAddress" largue round (click)="guardar_direccion()" >GUARDAR UBICACIÓN</button>
     </ion-card>
     <!-- <button ion-button block round (click)="click()">print</button> -->
     <ion-fab top left style="margin-top: 96%; z-index: 999;" (click)="click()">
@@ -31,7 +32,7 @@
       </button>
     </ion-fab>
     <ion-fab top right  (tap)="getPosition()">
-      <button ion-fab color="amarillo">
+      <button ion-fab color="accent">
         <ion-icon style="color: white;" name="locate"></ion-icon>
       </button>
     </ion-fab>

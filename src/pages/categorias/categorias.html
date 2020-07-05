@@ -1,22 +1,25 @@
-<ion-header no-border style="background-color: #F1EEE9">
-  <ion-navbar transparent>
+
+
+<ion-header no-border>
+  <ion-navbar color="primary">
     <button ion-button menuToggle
-      style="background-color: #e5cc7b; opacity: 0.9; width: 48px; height: 48px; border-radius: 50%;position: relative;">
-      <ion-icon name="menu" style="margin-left: 21px;"></ion-icon>
+      style="background-color: #D1C4E9; opacity: 0.9; width: 48px; height: 48px; border-radius: 50%;position: relative;">
+      <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title style="text-align: center;">
-      <!-- <strong style="font-size: 20px; margin-left: -25px; color: #9B0347;">PRODUCTOS</strong> -->
+    <ion-title>
+      Tus categorías
     </ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content >
+  <!-- <br><br> -->
   <div padding>
-    <h2>¿Que categorías de productos ofertas?</h2>
-    <p>Gestiona tus categorías</p>
+    <h5>Categorías que actualmente se muestran a tus clientes</h5>
+    <!-- <p>Gestiona tus categorías</p> -->
   </div>
 
   <div class="productos">
-    <ion-card *ngFor="let item of categorias" (click)="abrir_producto(item.IDPRODUCTO, item.NOMBRE)">
+    <ion-card *ngFor="let item of categorias">
       <ion-row>
         <ion-col col-3 style="text-align: center;">
           <ion-icon name="ios-apps-outline" style="font-size: 50px; color: #9b0347;"></ion-icon>
@@ -25,16 +28,16 @@
           <p class="titulo" style="color: #1f3352;"><strong>{{ item.NOMBRE }}</strong></p>
           <p class="subtitulo" style="color: #1f3352;">{{ item.DETALLE }}</p>
         </ion-col>
-        <ion-col col-4 style="vertical-align: middle; text-align: center;">
+        <!-- <ion-col col-4 style="vertical-align: middle; text-align: center;">
           <button ion-button outline round sm>Ver</button>
-        </ion-col>
+        </ion-col> -->
       </ion-row>
     </ion-card>
   </div>
-  <ion-fab right bottom>
+  <!-- <ion-fab right bottom>
     <button ion-fab color="amarillo" (click)="crear_categorias()">
       <ion-icon name="md-add" style="color: #9b0347;"></ion-icon>
     </button>
-  </ion-fab>
+  </ion-fab> -->
 </ion-content>
 

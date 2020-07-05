@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "597563328848",
+    "firebase_url": "https://deliveryibarra-d8a1b.firebaseio.com",
+    "project_id": "deliveryibarra-d8a1b",
+    "storage_bucket": "deliveryibarra-d8a1b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597563328848:android:4991e7b43b9a95fc0fc455",
+        "android_client_info": {
+          "package_name": "ibarra.delivery.proveedores"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "597563328848-1ohb02b5qcf644jv7dp1hvqb38l03qe8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyhzMkLy53s_uznsxF0MQZhl0sQNrQasU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "597563328848-1ohb02b5qcf644jv7dp1hvqb38l03qe8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

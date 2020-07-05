@@ -3,7 +3,7 @@
 
 // Font path is used to include ionicons,
 // roboto, and noto sans fonts
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 $font-path: "../assets/fonts";
 
 
@@ -35,19 +35,16 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #9b0347,
-  secondary:  #757575,
-  danger:     #FF5722,
-  light:      #f4f4f4,
-  dark:       #222,
-  morado  :   #5f0626,
-  moradoclaro: #9b0347,
-  amarilloprimary: #d3a200,
-  amarillo :  #F4C418,
-  azulprimary:  #1f3352,
-  azul:       #283593,
-  verdoso :   #00B5C6,
-  gris:       #F1EEE9,
+  darkprimary:  #512DA8,
+  lightprimary:  #D1C4E9,
+  primary:   #673AB7,
+  texticons: #FFF,
+  accent:  #FF5722,
+  primarytext: #212121,
+  secondarytext: #757575,
+  divider: #BDBDBD,
+  danger: #ce2b2b,
+
 );
 
 

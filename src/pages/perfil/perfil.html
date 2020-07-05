@@ -1,12 +1,12 @@
 <ion-header no-border style="background-color: #F1EEE9">
   <ion-navbar transparent>
     <button ion-button menuToggle
-      style="background-color: #e5cc7b; opacity: 0.9; width: 48px; height: 48px; border-radius: 50%;position: relative;">
+      style="background-color: #D1C4E9; opacity: 0.9; width: 48px; height: 48px; border-radius: 50%;position: relative;">
       <ion-icon name="menu" style="margin-left: 21px;"></ion-icon>
     </button>
     <ion-title style="text-align: center;">
-      <strong>Perfil de tu empresa</strong>
-      <!-- <strong style="font-size: 20px; margin-left: -25px; color: #9B0347;">PRODUCTOS</strong> -->
+      Perfil de tu empresa
+      <!-- <strong style="font-size: 20px; margin-left: -25px; color: #757575;">PRODUCTOS</strong> -->
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -18,15 +18,15 @@
   <ion-row>
     <ion-col col-8>
       <h5 style="margin-bottom: 0px;">{{ item.NOMBRE }}</h5>
-      <p style="color: #9b0347;">{{ item.CATEGORIA }}</p>
+      <p style="color: #757575;">{{ item.CATEGORIA }}</p>
     </ion-col>
     <ion-col col-4>
-      <img src="http://192.168.1.13/app_compras/public/{{ item.FOTO }}"
-        style="width: 80px; height:80px; object-fit: cover; border-radius: 50px; position: relative;" alt="">
-      <button ion-fab mini color="light" style="position: absolute; right: 15px; top: 40px;"
+      <img src="http://taptana.net/{{ item.FOTO }}"
+        style="width: 100px; height:100px; object-fit: cover; border-radius: 50px; position: relative; object-fit: cover;" alt="">
+      <!-- <button ion-fab mini color="light" style="position: absolute; right: 15px; top: 40px;"
         (tap)="update_foto_empresa()">
         <ion-icon name="create" style="color: #757575;"></ion-icon>
-      </button>
+      </button> -->
     </ion-col>
   </ion-row>
   <br>
@@ -48,19 +48,19 @@
           <p style="font-size: 11px;">Nombre proveedor</p>
         </ion-col>
         <ion-col col-6 padding>
-          <p style="color: #9b0347; font-size: 11px;">{{ item.NOMBRE }}</p>
+          <p style="color: #757575; font-size: 11px;">{{ item.NOMBRE }}</p>
         </ion-col>
         <ion-col col-6 padding>
           <p style="font-size: 11px;">Categoría</p>
         </ion-col>
         <ion-col col-6 padding>
-          <p style="color: #9b0347; font-size: 11px;">{{ item.CATEGORIA }}</p>
+          <p style="color: #757575; font-size: 11px;">{{ item.CATEGORIA }}</p>
         </ion-col>
         <ion-col col-6 padding>
           <p style="font-size: 11px;">Dirección</p>
         </ion-col>
         <ion-col col-6 padding>
-          <p style="color: #9b0347; font-size: 11px;">{{ item.DIRECCION }}</p>
+          <p style="color: #757575; font-size: 11px;">{{ item.DIRECCION }}</p>
         </ion-col>
       </ion-row>
     </ion-card-content>

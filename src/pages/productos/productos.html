@@ -1,31 +1,32 @@
-<ion-header no-border style="background-color: #F1EEE9">
-  <ion-navbar transparent>
+<ion-header no-border>
+  <ion-navbar color="primary">
     <button ion-button menuToggle
-      style="background-color: #e5cc7b; opacity: 0.9; width: 48px; height: 48px; border-radius: 50%;position: relative;">
-      <ion-icon name="menu" style="margin-left: 21px;"></ion-icon>
+      style="background-color: #D1C4E9; opacity: 0.9; width: 48px; height: 48px; border-radius: 50%;position: relative;">
+      <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title style="text-align: center;">
-      <!-- <strong style="font-size: 20px; margin-left: -25px; color: #9B0347;">PRODUCTOS</strong> -->
+    <ion-title>
+      
     </ion-title>
   </ion-navbar>
 </ion-header>
+<ion-content >
 <ion-content>
   <div padding>
-    <h2>¿Que productos ofertas?</h2>
-    <p>Ingresar correctamente tus productos, ayudará a tu imagen corporativa</p>
+    <h5>Productos que actualmente estas mostrando a tus clientes</h5>
+    <!-- <p>Ingresar correctamente tus productos, ayudará a tu imagen corporativa</p> -->
   </div>
 
   <div class="productos">
     <ion-card *ngFor="let item of productos" (click)="abrir_producto()">
       <ion-row>
         <ion-col col-3>
-          <img src="http://192.168.1.13/app_compras/public/{{ item.FOTO }}" style="width: 100%; height: 80px; object-fit: cover;border-radius: 5px;"
+          <img src="http://taptana.net/{{ item.FOTO }}" style="width: 100%; height: 80px; object-fit: cover;border-radius: 5px;"
             alt="">
         </ion-col>
         <ion-col col-5>
-          <p class="titulo" style="color: #1f3352;"><strong>{{ item.NOMBRE }}</strong></p>
-          <p class="subtitulo" style="color: #9b0347;">{{ item.CATEGORIA_PRODUCTO | uppercase }}</p>
-          <p class="subtitulo" style="color: #1f3352;">{{ item.DESCRIPCION }}</p>
+          <p class="titulo" style="color: #212121;"><strong>{{ item.NOMBRE }}</strong></p>
+          <p class="subtitulo" style="color: #FF5722;">{{ item.CATEGORIA_PRODUCTO | uppercase }}</p>
+          <p class="subtitulo" style="color: #747474;">{{ item.DESCRIPCION }}</p>
         </ion-col>
         <ion-col col-4 style="vertical-align: middle; text-align: center;">
           <br>
@@ -34,9 +35,9 @@
       </ion-row>
     </ion-card>
   </div>
-  <ion-fab right bottom>
+  <!-- <ion-fab right bottom>
     <button ion-fab color="amarillo" (click)="crear_producto()">
       <ion-icon style="color: #9b0347;" name="md-add"></ion-icon>
     </button>
-  </ion-fab>
+  </ion-fab> -->
 </ion-content>

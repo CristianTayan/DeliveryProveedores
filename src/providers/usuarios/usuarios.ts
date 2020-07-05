@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { LoadingController, AlertController } from 'ionic-angular';
 
-let rest_api = "http://192.168.1.13/app_compras/public/api/";
+let rest_api = "http://taptana.net/api/";
 
 @Injectable()
 export class UsuariosProvider {
@@ -31,6 +31,21 @@ export class UsuariosProvider {
             });
             alert.present();
             loading.dismiss();
+          }
+        )
+    });
+  }
+
+  async FCM_Token(data) {
+
+    return new Promise(resolve => {
+      this.http.post(rest_api + 'registrarToken', data)
+        .subscribe(
+          data => {
+            resolve(data);
+          },
+          err => {
+            console.log(err);
           }
         )
     });

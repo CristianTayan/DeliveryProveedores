@@ -4,7 +4,7 @@ import { PedidosProvider } from '../../providers/pedidos/pedidos';
 import { StatusBar } from '@ionic-native/status-bar';
 
 /**
- * Generated class for the ListaPedidosPage page.
+ * Generated class for the PedidosAtendidosPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -12,12 +12,14 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 @IonicPage()
 @Component({
-  selector: 'page-lista-pedidos',
-  templateUrl: 'lista-pedidos.html',
+  selector: 'page-pedidos-atendidos',
+  templateUrl: 'pedidos-atendidos.html',
 })
-export class ListaPedidosPage {
+export class PedidosAtendidosPage {
   pedidos;
+  pedidos_finalizados;
   habilitar;
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private pedidosProvider: PedidosProvider, private statusBar: StatusBar) {
   }
 
@@ -33,12 +35,21 @@ export class ListaPedidosPage {
     this.statusBar.overlaysWebView(false);
     this.statusBar.styleLightContent();
     this.get_pedidos();
+    this.get_pedidos_empresa_finalizados();
   }
 
   get_pedidos(){
-    this.pedidosProvider.get_pedidos_empresa(localStorage.getItem('idempresa'))
+    this.pedidosProvider.get_pedidos_atendidos_empresa(localStorage.getItem('idempresa'))
     .then( res => {
       this.pedidos = res;
+      console.log(this.pedidos);
+    })
+  }
+
+  get_pedidos_empresa_finalizados(){
+    this.pedidosProvider.get_pedidos_empresa_finalizados(localStorage.getItem('idempresa'))
+    .then( res => {
+      this.pedidos_finalizados = res;
       console.log(this.pedidos);
     })
   }
@@ -55,16 +66,6 @@ export class ListaPedidosPage {
       coordenaday: coordenaday,
       iddireccion:iddireccion,
     });
-  }
-
-  aceptar_pedido(idpedido){
-    this.pedidosProvider.atender_dedidos(idpedido)
-    .then(res => {
-      console.log(res);
-      localStorage.setItem('idpedido', idpedido); 
-    },(err) => {
-      // this.navCtrl.setRoot(HomePage);
-    })
   }
 
 }

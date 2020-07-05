@@ -23,13 +23,13 @@ productos;
 
   ionViewDidLoad() {
     this.get_productos();
-    this.statusBar.backgroundColorByHexString('#F1EEE9');
-    this.statusBar.styleDefault();
+    this.statusBar.backgroundColorByHexString('#512DA8');
+    this.statusBar.styleLightContent();
   }
   ionViewDidEnter(){
     this.get_productos();
-    this.statusBar.backgroundColorByHexString('#F1EEE9');
-    this.statusBar.styleDefault();
+    this.statusBar.backgroundColorByHexString('#512DA8');
+    this.statusBar.styleLightContent();
   }
 
   get_productos(){

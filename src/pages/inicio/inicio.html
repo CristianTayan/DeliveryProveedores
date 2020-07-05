@@ -1,11 +1,11 @@
-<ion-header no-border style="background-color: #F4C418;">
-  <ion-navbar transparent>
+<ion-header no-border>
+  <ion-navbar color="primary">
     <button ion-button menuToggle
-      style="background-color: #e5cc7b; opacity: 0.9; width: 48px; height: 48px; border-radius: 50%;position: relative;">
+      style="background-color: #D1C4E9; opacity: 0.9; width: 48px; height: 48px; border-radius: 50%;position: relative;">
       <ion-icon name="menu"style="margin-right: 21px;"></ion-icon>
     </button>
     <ion-title style="text-align: center;">
-      <strong style="font-size: 20px; margin-left: -25px; color: #9B0347;">DASHBOARD</strong>
+      {{ nombre_empresa }}
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -15,14 +15,14 @@
   <br>
   <ion-row style="margin: 0px;">
     <ion-col col-6 style="margin: 0px;">
-      <ion-card color="morado" style="margin: 0px; width: 100%; border-radius: 12px;">
+      <ion-card color="accent" style="margin: 0px; width: 100%; border-radius: 12px;">
         <ion-card-header>
           NUMERO DE VENTAS
         </ion-card-header>
         <ion-card-content>
           <ion-row>
             <ion-col col-6>
-              <h4 class="numero">26</h4>
+              <h4 class="numero">0</h4>
             </ion-col>
             <ion-col col-6>
               <ion-icon class="icon-card" name="cart"></ion-icon>
@@ -32,14 +32,14 @@
       </ion-card>
     </ion-col>
     <ion-col col-6 style="margin: 0px;">
-      <ion-card color="azul" style="margin: 0px; width: 100%; border-radius: 12px;">
+      <ion-card color="primary" style="margin: 0px; width: 100%; border-radius: 12px;">
         <ion-card-header>
           TOTAL FAVORITOS
         </ion-card-header>
         <ion-card-content>
           <ion-row>
             <ion-col col-6>
-              <h4 class="numero">26</h4>
+              <h4 class="numero">0</h4>
             </ion-col>
             <ion-col col-6>
               <ion-icon class="icon-card" name="heart"></ion-icon>
@@ -48,35 +48,36 @@
         </ion-card-content>
       </ion-card>
     </ion-col>
+    
     <ion-col col-6 style="margin: 0px;">
-      <ion-card color="verdoso" style="margin: 0px; width: 100%; border-radius: 12px;">
-        <ion-card-header>
-          TOTAL PEDIDOS
-        </ion-card-header>
-        <ion-card-content>
-          <ion-row>
-            <ion-col col-6>
-              <h4 class="numero">26</h4>
-            </ion-col>
-            <ion-col col-6>
-              <ion-icon class="icon-card" name="basket"></ion-icon>
-            </ion-col>
-          </ion-row>
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-    <ion-col col-6 style="margin: 0px;">
-      <ion-card color="amarillo" style="margin: 0px; width: 100%; border-radius: 12px;">
+      <ion-card color="lightprimary" style="margin: 0px; width: 100%; border-radius: 12px;">
         <ion-card-header>
           TOTAL PRODUCTOS
         </ion-card-header>
         <ion-card-content>
           <ion-row>
             <ion-col col-6>
-              <h4 class="numero" style="color: #9b0347;">26</h4>
+              <h4 class="numero" style="color: #757575;">0</h4>
             </ion-col>
             <ion-col col-6>
               <ion-icon class="icon-card" name="apps"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col col-6 style="margin: 0px;">
+      <ion-card color="danger" style="margin: 0px; width: 100%; border-radius: 12px;">
+        <ion-card-header>
+          TOTAL PEDIDOS
+        </ion-card-header>
+        <ion-card-content>
+          <ion-row>
+            <ion-col col-6>
+              <h4 class="numero">0</h4>
+            </ion-col>
+            <ion-col col-6>
+              <ion-icon class="icon-card" name="basket"></ion-icon>
             </ion-col>
           </ion-row>
         </ion-card-content>

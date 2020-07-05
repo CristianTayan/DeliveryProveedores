@@ -1,29 +1,21 @@
 page-pedido {
-  ion-header {
-    background-color: #f4f4f4;
-    ion-icon {
-      color: #9b0347;
-      margin-right: 20px;
-    }
-    ion-title {
-      font-weight: 400;
-      text-align: center;
-      strong {
-        font-size: 20px;
-        color: #9b0347;
-      }
-    }
-  }
   .scroll-content {
-    background-color: #f1eee9;
-    h2 {
-      margin: 0px;
-      color: #f4c418;
-    }
-    p {
-      color: #9b0347;
-      margin: 0px;
-    }
+    background-color: #f4f4f4;
+  }
+  .searchbar-input {
+    background: efe7cb !important;
+    border-radius: 12px !important;
+    height: 45px !important;
+    max-width: 400px;
+    font-size: 1.25em !important;
+    border: 1px solid transparent;
+  }
+  .searchbar-search-icon {
+    color: #283593;
+  }
+
+  .searchbar-md .searchbar-input {
+    color: #283593;
   }
 
   .productos {

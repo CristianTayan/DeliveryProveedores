@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { LoadingController, ToastController } from 'ionic-angular';
 
-let rest_api = "http://192.168.1.13/app_compras/public/api/";
+let rest_api = "http://taptana.net/api/";
 
 @Injectable()
 export class CategoriasProvider {

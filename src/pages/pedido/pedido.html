@@ -1,40 +1,47 @@
-<ion-header no-border style="background-color: #F1EEE9">
-  <ion-navbar transparent>
-    <button ion-button menuToggle
-      style="background-color: #e5cc7b; opacity: 0.9; width: 48px; height: 48px; border-radius: 50%;position: relative;">
-      <ion-icon name="menu" style="margin-left: 21px;"></ion-icon>
-    </button>
-    <ion-title style="text-align: center;">
-      <!-- <strong style="font-size: 20px; margin-left: -25px; color: #9B0347;">PRODUCTOS</strong> -->
+<ion-header no-border>
+  <ion-navbar color="primary">
+    <ion-title>
+      Pedido # {{ nropedido }}
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content >
-  <div padding>
-    <h2>Historial</h2>
-    <p>Observa tus pedidos recientes</p>
-  </div>
 
-  <div class="productos">
-    <ion-card (click)="abrir_producto(item.IDPRODUCTO, item.NOMBRE)">
-      <ion-row>
-        <ion-col col-3 style="text-align: center; vertical-align: middle;">
-          <ion-icon name="cart" style="font-size: 40px; margin-top: 10px;"></ion-icon>
-        </ion-col>
-        <ion-col col-5>
-          <p class="titulo" style="color: #1f3352;"><strong>Menestra de pollo</strong></p>
-          <p class="subtitulo" style="color: #1f3352;">Arroz, papas, menestra, pollo</p>
-        </ion-col>
-        <ion-col col-4 style="vertical-align: middle; text-align: center;">
-          <br>
-          <button ion-button round sm>$ 2,00</button>
-        </ion-col>
-      </ion-row>
-    </ion-card>
+
+<ion-content>
+  
+  <ion-list>
+    <ion-item *ngFor="let item of usuario" no-lines>
+      <h2>Cliente: {{ item.NOMBRE }}</h2>
+      <button ion-fab mini color="primary" (click)="llamar_usuario(item.CELULAR)" item-end><ion-icon name="ios-call" ></ion-icon></button>
+      <button ion-fab mini color="accent" item-end><ion-icon name="logo-whatsapp"></ion-icon></button>
+      <p>{{ item.DIRECCION }}</p>
+      <p>{{ item.CELULAR }}</p>
+    </ion-item>
+    <ion-list-header>
+      DETALLES DE LA ORDEN # {{ nropedido }}
+    </ion-list-header>
+    <ion-item class="item item-trns" *ngFor="let item of detalles">
+      <ion-avatar item-start>
+        <img src="http://taptana.net/{{ item.FOTO }}">
+      </ion-avatar>
+      <h2>{{ item.PRODUCTO }}</h2>
+      <h2 item-end>$ {{ item.TOTAL}}</h2>
+      <p>$ {{ item.COSTO }} C/U  -  X {{ item.CANTIDAD }}</p>
+    </ion-item>
+    <br>
+    <ion-item class="item item-trns">
+      <h2 item-star>Costo de envío</h2>
+      <h2 style="color: #FF5722;" item-end>+ {{ costo_envio }}</h2>
+    </ion-item>
+  </ion-list>
+  <div padding>
+    <button  ion-button block color="accent" style="text-transform: none;" large round (click)="pedido_listo()">Llamar transportista</button>
+    <!-- <button *ngIf="estado == 'F'" ion-button block color="accent" style="text-transform: none;" large round (click)="pedido_listo()" disabled>Llamar transportista</button> -->
   </div>
-  <ion-fab right bottom>
-    <button ion-fab color="amarillo">
-      <ion-icon name="md-add"></ion-icon>
-    </button>
-  </ion-fab>
+  <ion-footer color="primary">
+    <ion-item class="item item-trns" no-lines>
+      <h3 item-star>TOTAL</h3>
+      <h1 item-end>$ {{ total }}</h1>
+    </ion-item>
+  </ion-footer>
 </ion-content>
